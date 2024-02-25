@@ -8,19 +8,19 @@ Vite is a modern build tool and development server that aims to provide a faster
 
 -- Here are the key differences between Vite and CRA :
 
-1.Development Server : Vite provides a significantly faster development server due to its use of native ES modules and esbuild, while CRA uses the Webpack Dev Server.
+1. Development Server : Vite provides a significantly faster development server due to its use of native ES modules and esbuild, while CRA uses the Webpack Dev Server.
 
-2.Hot Reloading : Both Vite and CRA support hot reloading, but Vite's implementation is based on native ES modules, which leads to faster updates.
+2. Hot Reloading : Both Vite and CRA support hot reloading, but Vite's implementation is based on native ES modules, which leads to faster updates.
 
-3.Build Performance : Vite is known for its efficient build performance, utilizing esbuild for pre-bundling dependencies and Rollup for producing optimized production builds.
+3. Build Performance : Vite is known for its efficient build performance, utilizing esbuild for pre-bundling dependencies and Rollup for producing optimized production builds.
 
-4.Configuration : Vite offers a more flexible configuration system, allowing for customization of various aspects of the build process. CRA, on the other hand, provides a zero-configuration setup with sensible defaults.
+4. Configuration : Vite offers a more flexible configuration system, allowing for customization of various aspects of the build process. CRA, on the other hand, provides a zero-configuration setup with sensible defaults.
 
-5.Support for Modern Features : Vite has full support for modern JavaScript features like ES modules and TypeScript without requiring additional transpilation steps. CRA has limited support for pure JavaScript.
+5. Support for Modern Features : Vite has full support for modern JavaScript features like ES modules and TypeScript without requiring additional transpilation steps. CRA has limited support for pure JavaScript.
 
-6.Code Splitting : In Vite, code splitting is manual, giving developers more control, whereas CRA handles code splitting automatically.
+6. Code Splitting : In Vite, code splitting is manual, giving developers more control, whereas CRA handles code splitting automatically.
 
-7.Community and Maintenance : CRA has been around longer and has a larger community, which can be beneficial for finding solutions to common problems. Vite is growing rapidly and is actively maintained.
+7. Community and Maintenance : CRA has been around longer and has a larger community, which can be beneficial for finding solutions to common problems. Vite is growing rapidly and is actively maintained.
 
 Regarding Webpack, it is a well-established module bundler that is commonly used in many build processes. It is highly configurable and has a rich ecosystem of plugins and loaders. Vite, however, takes a different approach by focusing on speed and leveraging modern browser capabilities like ES modules. This results in a faster development experience with less configuration overhead.
 
@@ -30,7 +30,7 @@ Regarding Webpack, it is a well-established module bundler that is commonly used
 
 Every React component undergoes a well-defined lifecycle, encompassing four distinct phases : Mounting, Updating, Unmounting, and Error Handling. These phases are orchestrated by React itself, ensuring predictable behavior and enabling us to perform specific actions at each stage.
 
-#### Mounting Phase
+#### 1. Mounting Phase
 
 - constructor() :
   This method, invoked before render(), is ideal for initializing state and binding event handlers. It receives the component's props as an argument.
@@ -69,7 +69,7 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
   Fetch data : fetch('https ://api.example.com/data') .then(response => response.json()) .then(data => this.setState({ /_ update state with fetched data _/ }));`
   Set up subscriptions : this.subscription = someService.subscribe(/_ callback _/);
 
-#### Updating Phase
+#### 2. Updating Phase
 
 - getSnapshotBeforeUpdate(prevProps, prevState) (Optional) :
   This method, introduced in React 16.3, allows you to capture information from the DOM before an update occurs. It receives the component's prevProps and prevState as arguments and should return a value that will be passed as an argument to componentDidUpdate(prevProps, prevState, snapshot).
@@ -101,7 +101,7 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
   Access DOM elements using refs : this.myRef.current.focus(); (use with caution)
   Update external state : someExternalState.update(/_ updated data _/);
 
-#### Unmounting Phase
+#### 3. Unmounting Phase
 
 - componentWillUnmount() :
   This method is invoked immediately before the component is unmounted (removed from the DOM). This is where you should perform cleanup tasks such as clearing subscriptions, timers, or event listeners to prevent memory leaks and avoid stale references.
