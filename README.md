@@ -4,8 +4,6 @@ Its a repo for react points that we may have forgotten
 
 ### What is (vite) and whats different between vite and cra for create react app and also whats different between vite and webpack ?
 
-```
-
 Vite is a modern build tool and development server that aims to provide a faster and leaner development experience for modern web projects. Unlike Create React App (CRA), which uses Webpack as its build tool, Vite uses its own native build tool called esbuild for development and Rollup for production builds 12.
 
 -- Here are the key differences between Vite and CRA:
@@ -27,5 +25,3 @@ Vite is a modern build tool and development server that aims to provide a faster
 Regarding Webpack, it is a well-established module bundler that is commonly used in many build processes. It is highly configurable and has a rich ecosystem of plugins and loaders. Vite, however, takes a different approach by focusing on speed and leveraging modern browser capabilities like ES modules. This results in a faster development experience with less configuration overhead.
 
 -- In summary, Vite is a newer tool that offers a faster development experience and a more streamlined build process, particularly for projects that heavily rely on modern JavaScript features. CRA is a tried-and-true solution with a mature ecosystem and a no-configuration setup that is ideal for beginners or those who prefer a more established tool. Webpack is a powerful and configurable bundler that is widely used in the industry, but it may require more setup and configuration compared to Vite.
-
-```
