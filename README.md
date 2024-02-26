@@ -41,7 +41,7 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
   Initialize state using this.state = { /_ initial state object _/ };
   Bind event handlers using this.handleClick = this.handleClick.bind(this); (in class components only)
 
-<hr>
+<br>
 
 - getDerivedStateFromProps(nextProps, prevState) (Optional) :
   This method, introduced in React 16.3, allows you to derive updates to the component's state based on changes in its props or previous state. It receives the component's nextProps and prevState as arguments and should return a new state object if necessary, or null if no state update is required.
@@ -50,7 +50,7 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
   Return a new state object : return { /_ new state object _/ };
   Return null to indicate no state update : return null;
 
-<hr>
+<br>
 
 - render() :
   This method, the heart of a React component, returns the JSX (JavaScript XML) that defines the UI elements to be rendered. React uses this output to update the DOM.
@@ -62,7 +62,7 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
 <div> Hello, world!</div>
 ```
 
-<hr>
+<br>
 
 - componentDidMount() :
   This method is invoked immediately after the component is mounted (inserted into the DOM). This is the place to perform side effects such as fetching data from an API, initializing subscriptions, or integrating with third-party libraries.
@@ -79,7 +79,7 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
   Usage :
   Return a value to be passed to componentDidUpdate : return { /_ value to capture _/ };
 
-<hr>
+<br>
 
 - shouldComponentUpdate(nextProps, nextState) (Optional) :
   This method, invoked before an update, allows you to control whether the component should re-render based on changes in props or state. It receives the component's nextProps and nextState as arguments and should return true if a re-render is necessary, or false otherwise. Use this method judiciously to optimize performance.
@@ -89,12 +89,12 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
   Return false to skip re-rendering : return false; (use with caution)
   getDerivedStateFromProps(nextProps, prevState) (Optional) : If present, this method is called again during the update phase to compute any state updates based on the new props and previous state. It follows the same rules and usage as described in the mounting phase.
 
-<hr>
+<br>
 
 - render() :
   Just like in the mounting phase, render() is called to determine the updated JSX output.
 
-<hr>
+<br>
 
 - componentDidUpdate(prevProps, prevState, snapshot) (Optional) :
   This method is invoked immediately after the component is updated (DOM changes are reflected). It is useful for performing actions that depend on DOM updates, such as manipulating DOM elements directly (use with caution) or synchronizing external state.
@@ -112,11 +112,11 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
 
 ### JSON Server Explained
 
-JSON Server is a lightweight tool for quickly creating a mock RESTful API using a simple JSON file as a data source. It's commonly used in development and testing environments to mimic a backend server when building front-end applications.
+JSON Server is a lightweight tool for quickly creating a mock RESTfulll API using a simple JSON file as a data source. It's commonly used in development and testing environments to mimic a backend server when building front-end applications.
 
 #### Features
 
-- **Mock RESTful API** : Create a mock server with CRUD operations using a JSON file as a database.
+- **Mock RESTfull API** : Create a mock server with CRUD operations using a JSON file as a database.
 - **Simple Setup** : Easily install JSON Server via npm and define routes using JSON syntax.
 - **Custom Routes** : Define custom routes to handle various HTTP methods and URL patterns.
 - **Filtering, Sorting, and Pagination** : Supports filtering, sorting, and pagination of data with query parameters.
@@ -154,4 +154,4 @@ Consider the following [YourDataBaseName].json :
 }
 ```
 
-This file defines a collection of posts. Running JSON Server with this file will create RESTful endpoints for CRUD operations on posts.
+This file defines a collection of posts. Running JSON Server with this file will create RESTfull endpoints for CRUD operations on posts.
