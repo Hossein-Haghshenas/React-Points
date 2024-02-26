@@ -26,6 +26,8 @@ Regarding Webpack, it is a well-established module bundler that is commonly used
 
 -- In summary, Vite is a newer tool that offers a faster development experience and a more streamlined build process, particularly for projects that heavily rely on modern JavaScript features. CRA is a tried-and-true solution with a mature ecosystem and a no-configuration setup that is ideal for beginners or those who prefer a more established tool. Webpack is a powerful and configurable bundler that is widely used in the industry, but it may require more setup and configuration compared to Vite.
 
+<hr>
+
 ### React Lifecycle Explained
 
 Every React component undergoes a well-defined lifecycle, encompassing four distinct phases : Mounting, Updating, Unmounting, and Error Handling. These phases are orchestrated by React itself, ensuring predictable behavior and enabling us to perform specific actions at each stage.
@@ -105,3 +107,51 @@ Every React component undergoes a well-defined lifecycle, encompassing four dist
 
 - componentWillUnmount() :
   This method is invoked immediately before the component is unmounted (removed from the DOM). This is where you should perform cleanup tasks such as clearing subscriptions, timers, or event listeners to prevent memory leaks and avoid stale references.
+
+<hr>
+
+### JSON Server Explained
+
+JSON Server is a lightweight tool for quickly creating a mock RESTful API using a simple JSON file as a data source. It's commonly used in development and testing environments to mimic a backend server when building front-end applications.
+
+#### Features
+
+- **Mock RESTful API** : Create a mock server with CRUD operations using a JSON file as a database.
+- **Simple Setup** : Easily install JSON Server via npm and define routes using JSON syntax.
+- **Custom Routes** : Define custom routes to handle various HTTP methods and URL patterns.
+- **Filtering, Sorting, and Pagination** : Supports filtering, sorting, and pagination of data with query parameters.
+- **Middleware Support** : Extend functionality with middleware for tasks like authentication and logging.
+- **Use Cases** : Ideal for prototyping and testing front-end applications before a real backend is available.
+
+#### Usage
+
+1. Install JSON Server globally or as a project dependency:
+
+```bash
+npm install -g json-server
+```
+
+2. Create a JSON file containing your data, e.g., db.json.
+
+3. Define routes in db.json using JSON Server's syntax.
+
+4. Start JSON Server with:
+
+```bash
+json-server --watch [YourDataBaseName].json
+```
+
+#### Example
+
+Consider the following [YourDataBaseName].json :
+
+```json
+{
+  "posts": [
+    { "id": 1, "title": "blog 1", "author": "hossein haghshenas" },
+    { "id": 2, "title": "blog 2", "author": "Elle Fanning" }
+  ]
+}
+```
+
+This file defines a collection of posts. Running JSON Server with this file will create RESTful endpoints for CRUD operations on posts.
